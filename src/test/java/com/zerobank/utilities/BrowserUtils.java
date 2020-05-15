@@ -65,6 +65,7 @@ public class BrowserUtils {
     List<String> elemTexts = new ArrayList<>();
     for (WebElement el : list) {
       elemTexts.add(el.getText());
+      BrowserUtils.wait(1);
     }
     return elemTexts;
   }
@@ -158,6 +159,8 @@ public class BrowserUtils {
     return Driver.getDriver().getTitle();
   }
 
+  public static void scrollToElement() {
+  }
 
 
   /**

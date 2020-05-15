@@ -2,6 +2,7 @@ package com.zerobank.pages;
 
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -31,7 +32,7 @@ public class PageBase {
         mainOptions.get(2).click();
         System.out.println(BrowserUtils.getCurrentTitle());
         break;
-      case "Pays Bills":
+      case "Pay Bills":
         mainOptions.get(3).click();
         System.out.println(BrowserUtils.getCurrentTitle());
         break;
@@ -42,13 +43,23 @@ public class PageBase {
       case "Online Statements":
         mainOptions.get(5).click();
         System.out.println(BrowserUtils.getCurrentTitle());
+        break;
       default:
         mainOptions.get(1).click();
         System.out.println(BrowserUtils.getCurrentTitle());
 
     }
+    BrowserUtils.wait(1);
   }
 
+  public void secondHeadTabs(String tab) {
+    BrowserUtils.wait(1);
+    String tab1 = "//a[contains(text(),'" + tab + "')]";
+    WebElement headTab = Driver.getDriver().findElement(By.xpath(tab1));
+    BrowserUtils.waitForClickability(By.xpath(tab1), 2);
+    BrowserUtils.waitForClickability(By.xpath(tab1), 2);
 
+    headTab.click();
+  }
 }
 

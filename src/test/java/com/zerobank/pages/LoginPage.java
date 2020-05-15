@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 
-public class LoginPage extends PageBase{
+public class LoginPage extends PageBase {
 
   @FindBy(className = "icon-signin")
   public WebElement singIn;
@@ -23,6 +23,7 @@ public class LoginPage extends PageBase{
   public WebElement LoginTxt;
   @FindBy(css = "#user_remember_me")
   public WebElement rememberMeElement;
+
   //==============================
   public void login() {
 
@@ -41,7 +42,7 @@ public class LoginPage extends PageBase{
     return accessDenied.getText();
   }
 
-  public static String  getCurrentTitle(){
+  public static String getCurrentTitle() {
     return Driver.getDriver().getTitle();
   }
 }

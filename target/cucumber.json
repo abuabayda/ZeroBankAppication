@@ -1,49 +1,32 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 1000000,
-              "status": "skipped"
-            },
-            "line": 5,
-            "name": "the user accesses the Find Transactions tab",
-            "match": {
-              "location": "com.zerobank.step_definitions.Practice.AccountActivitySteps.the_user_accesses_the_Find_Transactions_tab()"
-            },
-            "keyword": "Given "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-05-07T06:23:03.157Z",
+        "start_timestamp": "2020-05-14T05:09:16.147Z",
         "before": [
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 2716000000,
+              "status": "passed"
             },
             "match": {
               "location": "com.zerobank.step_definitions.Hooks.setUpScenario()"
             }
           }
         ],
-        "line": 39,
-        "name": "Type",
+        "line": 23,
+        "name": "Download statements",
         "description": "",
-        "id": "find-transactions-in-account-activity;type",
+        "id": "statements-and-documents-details;download-statements;;2",
         "after": [
           {
+            "output": [
+              "Complete scenario: Download statements"
+            ],
             "result": {
-              "status": "skipped"
+              "duration": 112000000,
+              "status": "passed"
             },
             "match": {
               "location": "com.zerobank.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)"
@@ -51,75 +34,432 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 3000000,
-              "status": "skipped"
+              "duration": 5444000000,
+              "status": "passed"
             },
-            "line": 40,
-            "name": "the user accesses the Find Transactions tab",
+            "line": 17,
+            "name": "the user accesses the \"Online Statements\" tab",
             "match": {
-              "location": "com.zerobank.step_definitions.Practice.AccountActivitySteps.the_user_accesses_the_Find_Transactions_tab()"
+              "arguments": [
+                {
+                  "val": "\"Online Statements\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_accesses_the_Statements_Documents_tab(java.lang.String)"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 64000000,
+              "status": "passed"
             },
-            "line": 41,
-            "name": "clicks search",
+            "line": 18,
+            "name": "the user selects the Recent Statements Year 2009",
             "match": {
-              "location": "com.zerobank.step_definitions.Practice.AccountActivitySteps.clicks_search()"
+              "arguments": [
+                {
+                  "val": "2009",
+                  "offset": 44
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_selects_the_Recent_Statements_Year(java.lang.Integer)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 1170000000,
+              "status": "passed"
             },
-            "line": 42,
-            "name": "results table should show at least one result under Deposit",
-            "match": {},
-            "keyword": "Then "
+            "line": 19,
+            "name": "the user clicks on statement \"Statement 31/11/09(57K)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statement 31/11/09(57K)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_clicks_on_statement(java.lang.String)"
+            },
+            "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 2056000000,
+              "status": "passed"
             },
-            "line": 43,
-            "name": "results table should show at least one result under Withdrawal",
-            "match": {},
+            "line": 20,
+            "name": "the downloaded file name should contain \"31/11/09\" And the file type should be pdf",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"31/11/09\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_downloaded_file_name_should_contain_And_the_file_type_should_be_pdf(java.lang.String)"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@transaction"
+            "name": "@download_statements"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T05:09:27.799Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1078000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.step_definitions.Hooks.setUpScenario()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Download statements",
+        "description": "",
+        "id": "statements-and-documents-details;download-statements;;3",
+        "after": [
+          {
+            "output": [
+              "Complete scenario: Download statements"
+            ],
+            "result": {
+              "duration": 91000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 6676000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user accesses the \"Online Statements\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Online Statements\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_accesses_the_Statements_Documents_tab(java.lang.String)"
+            },
+            "keyword": "Given "
           },
           {
-            "name": "@type"
+            "result": {
+              "duration": 70000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user selects the Recent Statements Year 2010",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2010",
+                  "offset": 44
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_selects_the_Recent_Statements_Year(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1148000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on statement \"Statement 01/12/10(57K)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statement 01/12/10(57K)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_clicks_on_statement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2069000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the downloaded file name should contain \"01/12/10\" And the file type should be pdf",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"01/12/10\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_downloaded_file_name_should_contain_And_the_file_type_should_be_pdf(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@download_statements"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T05:09:38.952Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1421000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.step_definitions.Hooks.setUpScenario()"
+            }
+          }
+        ],
+        "line": 25,
+        "name": "Download statements",
+        "description": "",
+        "id": "statements-and-documents-details;download-statements;;4",
+        "after": [
+          {
+            "output": [
+              "Complete scenario: Download statements"
+            ],
+            "result": {
+              "duration": 98000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5502000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user accesses the \"Online Statements\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Online Statements\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_accesses_the_Statements_Documents_tab(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 71000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user selects the Recent Statements Year 2011",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2011",
+                  "offset": 44
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_selects_the_Recent_Statements_Year(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1139000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on statement \"Statement 05/12/11(57K)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statement 05/12/11(57K)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_clicks_on_statement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2051000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the downloaded file name should contain \"05/12/11\" And the file type should be pdf",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"05/12/11\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_downloaded_file_name_should_contain_And_the_file_type_should_be_pdf(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@download_statements"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-05-14T05:09:49.246Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1062000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.step_definitions.Hooks.setUpScenario()"
+            }
+          }
+        ],
+        "line": 26,
+        "name": "Download statements",
+        "description": "",
+        "id": "statements-and-documents-details;download-statements;;5",
+        "after": [
+          {
+            "output": [
+              "Complete scenario: Download statements"
+            ],
+            "result": {
+              "duration": 85000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.zerobank.step_definitions.Hooks.tearDownScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5196000000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the user accesses the \"Online Statements\" tab",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Online Statements\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_accesses_the_Statements_Documents_tab(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 66000000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the user selects the Recent Statements Year 2012",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2012",
+                  "offset": 44
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_selects_the_Recent_Statements_Year(java.lang.Integer)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1149000000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "the user clicks on statement \"Statement 01/10/12(57K)\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Statement 01/10/12(57K)\"",
+                  "offset": 29
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_user_clicks_on_statement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2049000000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "the downloaded file name should contain \"01/10/12\" And the file type should be pdf",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"01/10/12\"",
+                  "offset": 40
+                }
+              ],
+              "location": "com.zerobank.step_definitions.Practice.StatementStepDef.the_downloaded_file_name_should_contain_And_the_file_type_should_be_pdf(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@download_statements"
           }
         ]
       }
     ],
-    "name": "Find Transactions in Account Activity",
+    "name": "Statements and Documents details",
     "description": "",
-    "id": "find-transactions-in-account-activity",
+    "id": "statements-and-documents-details",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/FindTransactions.feature",
-    "tags": [
-      {
-        "name": "@transaction",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/StatementsAndDocuments.feature",
+    "tags": []
   }
 ]

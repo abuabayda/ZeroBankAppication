@@ -13,8 +13,8 @@ import org.junit.runner.RunWith;
 
        features = "src/test/resources",
        glue = "com/zerobank/step_definitions",
-       dryRun = true,
-       tags = "@type"
+       dryRun = false,
+       tags = "@download_statements"
 )
 public class CukesRunner {
 }

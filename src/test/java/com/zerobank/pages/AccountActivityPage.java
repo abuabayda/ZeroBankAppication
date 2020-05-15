@@ -3,6 +3,7 @@ package com.zerobank.pages;
 import com.zerobank.utilities.BrowserUtils;
 import com.zerobank.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -26,17 +27,25 @@ public class AccountActivityPage extends PageBase {
   @FindBy(xpath = "//div[@id='all_transactions_for_account']//td")
   public List <WebElement> search_Res;
   @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tr/td[1]")
-  public List<WebElement> filter_Res;
+  public List<WebElement>filter_Res;
   @FindBy(id = "aa_description")
   public WebElement desc_input;
-  @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tr/td[2]")
+  @FindBy(xpath = "//div[@id='filtered_transactions_for_account']//tr/td")
   public List<WebElement> desc_col;
+  @FindBy(xpath = "//div[@id='filtered_transactions_for_account']")
+  public WebElement Filter;
 
+public String filterBColumn(Integer column){
+  String col = "//div[@id='filtered_transactions_for_account']//tr//td["+column+"]";
+  WebElement xpath = Driver.getDriver().findElement(By.xpath(col));
+  return xpath.getText();
+}
 
 
   public String  setAccountDrop(String account){
 
-    Select accountSelected = new Select(Driver.getDriver().findElement(By.cssSelector()));
+    Select accountSelected = new Select(Driver.getDriver().
+              findElement(By.xpath("//select[@id='aa_accountId']")));
     accountSelected.selectByVisibleText(account);
     return account;
   }
@@ -45,7 +54,8 @@ public class AccountActivityPage extends PageBase {
     return select.getOptions();
   }
   public String  transactionType(String type){
-    Select accountSelected = new Select(Driver.getDriver().findElement(By.cssSelector("#aa_accountId.input-xlarge")));
+    Select accountSelected = new Select(Driver.getDriver().
+                    findElement(By.cssSelector("#aa_accountId.input-xlarge")));
     accountSelected.selectByVisibleText(type);
     return type;
   }
@@ -62,10 +72,12 @@ public class AccountActivityPage extends PageBase {
 
     BrowserUtils.wait(1);
   }
-  public String setTypeDrop(String type){
+  public void setTypeDrop(String type){
 
     Select accountSelected = new Select(Driver.getDriver().findElement(By.id("aa_type")));
     accountSelected.selectByVisibleText(type);
-    return type;
+  }
+  public void scrollToElement(WebElement element) {
+    ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
   }
 }
