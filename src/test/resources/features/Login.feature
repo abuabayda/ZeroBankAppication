@@ -1,4 +1,5 @@
-@login_Zero App
+@login_ZeroApp @regression
+
 Feature: Login to Zero Application
 
 Background:

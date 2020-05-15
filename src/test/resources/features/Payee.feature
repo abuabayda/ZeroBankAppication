@@ -1,4 +1,5 @@
-@PayeeFeature
+@PayeeFeature @regression
+
 Feature: Add new payee under pay bills
 
   @addPayee

@@ -1,3 +1,4 @@
+@regression
 Feature: Statements and Documents details
 
   @statement

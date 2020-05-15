@@ -1,4 +1,5 @@
-@Zero_Banks_Summary @wip
+@Zero_Banks_Summary @wip @regression
+
 Feature: Zero Account Summary, Account activity, Pay bills
 
   Background:

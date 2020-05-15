@@ -1,4 +1,5 @@
-@foreign_currency
+@foreign_currency @regression
+
 Feature: Purchase Foreign Currency
 
   @currency
